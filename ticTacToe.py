@@ -1,4 +1,9 @@
 def printBoard(board):
+    print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
+    print('-+-+-')
+    print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])
+    print('-+-+-')
+    print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
     # TO DO #################################################################
     # Write code in this function that prints the game board.               #
     # The code in this function should only print, the user should NOT      #
@@ -7,8 +12,25 @@ def printBoard(board):
     # Hint: you can follow the same process that was done in the textbook.  #
     #########################################################################
 
-def checkWinner(board, player):    
+def checkWinner(board, player):
     print('Checking if ' + player + ' is a winner...')
+    if theBoard.get('top-L') == theBoard.get('top-M') == theBoard.get('top-R') == turn:
+        return True
+    elif theBoard.get('mid-L') == theBoard.get('mid-M') == theBoard.get('mid-R') == turn:
+        return True
+    elif theBoard.get('low-L') == theBoard.get('low-M') == theBoard.get('low-R') == turn:
+        return True
+    elif theBoard.get('top-L') == theBoard.get('mid-L') == theBoard.get('low-L') == turn:
+        return True
+    elif theBoard.get('top-M') == theBoard.get('mid-M') == theBoard.get('low-M') == turn:
+        return True
+    elif theBoard.get('top-R') == theBoard.get('mid-R') == theBoard.get('low-R') == turn:
+        return True
+    elif theBoard.get('top-L') == theBoard.get('mid-M') == theBoard.get('low-R') == turn:
+        return True
+    elif theBoard.get('top-R') == theBoard.get('mid-M') == theBoard.get('low-L') == turn:
+        return True
+        
     
     # TO DO #################################################################
     # Write code in this function that checks the tic-tac-toe board          #
