@@ -14,21 +14,21 @@ def printBoard(board):
 
 def checkWinner(board, player):
     print('Checking if ' + player + ' is a winner...')
-    if theBoard.get('top-L') == theBoard.get('top-M') == theBoard.get('top-R') == turn:
+    if board.get('top-L') == player and board.get('top-M') == player and board.get('top-R') == player:
         return True
-    elif theBoard.get('mid-L') == theBoard.get('mid-M') == theBoard.get('mid-R') == turn:
+    elif board.get('mid-L') == player and board.get('mid-M') == player and board.get('mid-R') == player:
         return True
-    elif theBoard.get('low-L') == theBoard.get('low-M') == theBoard.get('low-R') == turn:
+    elif board.get('low-L') == player and board.get('low-M') == player and board.get('low-R') == player:
         return True
-    elif theBoard.get('top-L') == theBoard.get('mid-L') == theBoard.get('low-L') == turn:
+    elif board.get('top-L') == player and board.get('mid-L') == player and board.get('low-L') == player:
         return True
-    elif theBoard.get('top-M') == theBoard.get('mid-M') == theBoard.get('low-M') == turn:
+    elif board.get('top-M') == player and board.get('mid-M') == player and board.get('low-M') == player:
         return True
-    elif theBoard.get('top-R') == theBoard.get('mid-R') == theBoard.get('low-R') == turn:
+    elif board.get('top-R') == player and board.get('mid-R') == player and board.get('low-R') == player:
         return True
-    elif theBoard.get('top-L') == theBoard.get('mid-M') == theBoard.get('low-R') == turn:
+    elif board.get('top-L') == player and board.get('mid-M') == player and board.get('low-R') == player:
         return True
-    elif theBoard.get('top-R') == theBoard.get('mid-M') == theBoard.get('low-L') == turn:
+    elif board.get('top-R') == player and board.get('mid-M') == player and board.get('low-L') == player:
         return True
         
     
