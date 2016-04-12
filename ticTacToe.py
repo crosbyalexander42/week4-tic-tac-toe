@@ -31,6 +31,8 @@ def checkWinner(board, player):
         return True
     elif board.get('top-R') == player and board.get('mid-M') == player and board.get('low-L') == player:
         return True
+    else:
+        return False
         
     
     # TO DO #################################################################
